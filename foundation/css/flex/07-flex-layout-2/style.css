@@ -3,27 +3,75 @@ body {
     margin: 0;
     min-height: 100vh;
   }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
   
   .header {
     height: 72px;
+    font-size: 32px;
+    font-weight: 900;
+    padding-left: 16px;
     background: darkmagenta;
     color: white;
+    display: flex;
+    align-items: center;
+  }
+
+  .body-container{
+    display: flex;
+    flex: 1;
   }
   
   .footer {
     height: 72px;
     background: #eee;
     color: darkmagenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   .sidebar {
     width: 300px;
     background: royalblue;
     box-sizing: border-box;
+    flex-shrink: 0;
+    /* display: flex;
+    flex-direction: column; */
+    padding: 16px;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .sidebar a {
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
   }
   
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 32px;
+    gap: 16px;
+    flex-grow: 1;
+  }
+
   .card {
     border: 1px solid #eee;
     box-shadow: 2px 4px 16px rgba(0,0,0,.06);
     border-radius: 4px;
+    width: 299px;
+    height: 325px;
+    padding: 16px;
   }
