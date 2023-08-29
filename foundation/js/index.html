@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test JavaScript</title>
+</head>
+<body style="font-family: Arial, Helvetica, sans-serif;">
+    <button>Start machine</button>
+    <p>The machine is stopped.</p>
+
+    <script>
+        // const myInt = 5;
+        // const myFloat = 6.667;
+        // console.log(myInt);
+        // console.log(myFloat);
+        // console.log(typeof myInt);
+        // console.log(typeof myFloat);
+
+        // const lotsOfDecimal = 1.766584958675746364;
+        // console.log(lotsOfDecimal);
+        // const twoDecimalPlaces = lotsOfDecimal.toFixed(2);
+        // console.log(twoDecimalPlaces);
+
+        // let myNumber = "74";
+        // console.log(typeof myNumber);
+        // // myNumber += 3;
+        // // console.log(myNumber);
+        // myNumber = Number(myNumber) + 3;
+        // console.log(typeof myNumber);
+        // console.log(myNumber);
+
+        // console.log(10 + 7);
+        // console.log(9 * 8);
+        // console.log(60 % 3);
+        // console.log(" ");
+
+        // const num1 = 10;
+        // const num2 = 50;
+        // console.log(9 * num1);
+        // console.log(num1 ** 3);
+        // console.log(num2 / num1);
+        // console.log(" ");
+
+        // console.log(5 + 10 * 3);
+        // console.log((num2 % 9) * num1);
+        // console.log(num2 + num1 / 8 + 2);
+        // console.log(" ");
+
+        // let myNum = 4;
+        // console.log(myNum++);
+        // console.log(myNum);
+        // let hisNum = 6;
+        // console.log(hisNum--);
+        // console.log(hisNum);
+        // console.log(" ");
+        // console.log(++myNum);
+        // console.log(--hisNum);
+
+        // let x = 3; // x contains the value 3
+        // let y = 4; // y contains the value‘ 4
+        // console.log(x *= y); // x now contains the value 12
+
+        const btn = document.querySelector("button");
+        const txt = document.querySelector("p");
+
+        btn.addEventListener("click", updateBtn);
+
+        function updateBtn() {
+            if (btn.textContent === "Start machine") {
+                btn.textContent = "Stop machine";
+                txt.textContent = "The machine has started!";
+            } else {
+                btn.textContent = "Start machine";
+                txt.textContent = "The machine is stopped.";
+            }
+        }
+    </script>
+</body>
+</html>
