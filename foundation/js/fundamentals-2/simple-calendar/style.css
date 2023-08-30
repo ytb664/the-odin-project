@@ -12,3 +12,14 @@ body {
 .output {
     border: 2px solid black;
 }
+
+.output li {
+    display: flex;
+    flex-flow: row wrap;
+    width: 25%;
+    border: 2px solid white;
+    padding: 5px;
+    height: 40px;
+    background-color: #4a2db6;
+    color: white;
+}
