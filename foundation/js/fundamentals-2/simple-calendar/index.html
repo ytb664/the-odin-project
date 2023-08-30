@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Simple Calendar</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <h1 class="title">Simple Calendar</h1>
+
     <div class="select-month">
         <label for="month">Pick a month:</label>
-
         <select name="month" id="month">
             <option value="January">January</option>
             <option value="February">February</option>
@@ -27,9 +26,12 @@
             <option value="December">December</option>
         </select>
     </div>
+
     <div class="output">
         <h2 class="selected-month"></h2>
         <ul class="total-days"></ul>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>

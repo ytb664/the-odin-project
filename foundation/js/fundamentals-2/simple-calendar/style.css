@@ -3,6 +3,8 @@ html {
 }
 
 body {
+    margin: 10px;
+    background: #f5f9fa;
     display: flex;
     flex-direction: column;
     justify-content: center;
