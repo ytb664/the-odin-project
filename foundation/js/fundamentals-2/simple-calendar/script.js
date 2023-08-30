@@ -1,6 +1,6 @@
-const select = document.querySelector(".select-month");
-const list = document.querySelector(".total-days");
-const month = document.querySelector(".selected-month");
+const select = document.querySelector("select");
+const list = document.querySelector("ul");
+const month = document.querySelector("h2");
 
 
 select.addEventListener("change", () => {
@@ -19,6 +19,7 @@ select.addEventListener("change", () => {
 function createCalendar(days, choice) {
     list.innerHTML = "";
     month.textContent = choice;
+
     for (let i = 1; i <= days; i++) {
         const listItem = document.createElement("li");
         listItem.textContent = i;
