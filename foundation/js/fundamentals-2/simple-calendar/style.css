@@ -11,13 +11,27 @@ body {
     align-items: center;
 }
 
+.select-month {
+    margin: 20px;
+}
+
 .output {
     border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.output ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
 }
 
 .output li {
-    display: flex;
-    flex-flow: row wrap;
     width: 25%;
     border: 2px solid white;
     padding: 5px;
