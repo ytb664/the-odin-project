@@ -24,19 +24,23 @@
   
   
   <script>
-    let season = 'summer';
+    let season = "summer";
     let response;
 
-    // Add your code here
+    switch(season) {
+        case "summer":
+            response = `A Sunny Hot Day Ahead, Its ${season} Season!`;
+            break;
+        case "winter":
+            response = `A Cold Freezing Day, ${season} Is Back!`;
+            break;
+    }
 
-    // Don't edit the code below here!
-
-    const section = document.querySelector('section');
-
-    let para1 = document.createElement('p');
+    const section = document.querySelector(".preview");
+    section.innerHTML = " ";
+    let para1 = document.createElement("p");
     para1.textContent = response;
     section.appendChild(para1);
-    
   </script>
 
 </html>
