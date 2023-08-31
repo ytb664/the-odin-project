@@ -13,7 +13,7 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <!-- <link rel="stylesheet" href="../styles.css" /> -->
   </head>
 
   <body>
@@ -27,13 +27,51 @@
     let response;
     let score = 75;
     let machineActive = false;
+
+    // function scoreResult(theScore) {
+    //     if (!machineActive) {
+    //         response = "Turn the Machine ON!";
+    //     } else {
+    //         if (theScore >= 0 && theScore <= 19) {
+    //             return `${theScore} was a terrible score -- total fail!`;
+    //         } else if (theScore >= 20 && theScore <= 39) {
+    //             return `You know some things with ${theScore} score, but it\'s pretty bad score. Needs improvement.`;
+    //         } else if (theScore >= 40 && theScore <= 69) {
+    //             return `You did a passable job with ${theScore} score,  not bad!`;
+    //         } else if (theScore >= 70 && theScore <= 89) {
+    //             return `${theScore}\'s a great score, you really know your stuff.`;
+    //         } else if (theScore >= 90 && theScore <= 100) {
+    //             return `${theScore}?! What an amazing score! Did you cheat? Are you for real?`;
+    //         } else {
+    //             return `This is not possible, an error has occurred.`;
+    //         }
+    //     }
+    // }
+
+    response = machineActive ? scoreResult(score) : "Turn the machine ON!";
+
+    function scoreResult(theScore) {
+        if (theScore >= 0 && theScore <= 19) {
+            return `${theScore} was a terrible score -- total fail!`;
+        } else if (theScore >= 20 && theScore <= 39) {
+            return `You know some things with ${theScore} score, but it\'s pretty bad score. Needs improvement.`;
+        } else if (theScore >= 40 && theScore <= 69) {
+            return `You did a passable job with ${theScore} score,  not bad!`;
+        } else if (theScore >= 70 && theScore <= 89) {
+            return `${theScore}\'s a great score, you really know your stuff.`;
+        } else if (theScore >= 90 && theScore <= 100) {
+            return `${theScore}?! What an amazing score! Did you cheat? Are you for real?`;
+        } else {
+            return `This is not possible, an error has occurred.`;
+        }
+    }
     
-    const section = document.querySelector("section");
+    const section = document.querySelector('section');
 
     let para1 = document.createElement('p');
     let para2 = document.createElement('p');
 
-    para1.textContent = `Your score is ${score}`;
+    para1.textContent = `Your score is ${ score }`;
     para2.textContent = response;
 
     section.appendChild(para1);
