@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circles Test</title>
+</head>
+<body>
+    <canvas></canvas>
+    <script>
+        let cir = document.querySelector("canvas");
+        cir.draw();
+        function draw() {
+        ctx.clearRect(0, 0, WIDTH, HEIGHT);
+        for (let i = 0; i < 100; i++) {
+            ctx.beginPath();
+            ctx.fillStyle = "rgba(255,0,0,0.5)";
+            ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+            ctx.fill();
+        }
+        }
+
+    </script>
+</body>
+</html>
