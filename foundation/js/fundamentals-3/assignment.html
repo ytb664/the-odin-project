@@ -8,7 +8,19 @@
 <body>
     
     <script>
-        
+        let add7 = (number) => number + 7;
+        let multiply = (num1, num2) => num1 * num2;
+        function capitalize(aString) {
+            let lowerString = aString.toLowerCase();
+            let firstLetter = aString.substring(0, 1);
+            let capFirst = firstLetter.toUpperCase();
+            String.prototype.replaceAt = function(index, replacement) {
+                return this.substring(0, index) + replacement + this.substring(index + replacement.length);
+            }
+            let result = lowerString.replaceAt(0, capFirst);
+
+            return result;
+        }
     </script>
 </body>
 </html>
