@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        let numInputted = prompt("How many numbers?", 100);
+        let numInputted = parseInt(prompt("How many numbers?", 100));
         for(let i = 1; i < numInputted; i++) {
             if (i % 3 === 0 && i % 5 === 0) {
                 console.log("FizzBuzz");
