@@ -17,12 +17,27 @@ function getComputerChoice() {
     }
 }
 
+// Full game function
 function game() {
 
+    let playerScore = 0;
+    let computerScore = 0;
+
+    // Game rounds loop
     for(let i = 1; i <= 5; i++) {
         playerSelection = prompt("Rock, Paper, Scissors");
-
+        computerSelection = getComputerChoice();
         console.log(playRound(playerSelection, computerSelection));
+        console.log(`Your Score: ${playerScore}`);
+        console.log(`Computer Score: ${computerScore}`);
+    }
+
+    if (playerScore > computerScore) {
+        console.log("GAME RESULT YOU WIN!");
+    } else if (playerScore < computerScore) {
+        console.log("GAME RESULT: YOU LOSE!");
+    } else {
+        console.log("GAME RESULT: DRAW");
     }
 
     // Function that takes two parameter, the computer selection and the player selection
@@ -37,12 +52,16 @@ function game() {
             return `DRAW! BOTH SELECTS ${playerSelection}`;
         }
         if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
+            playerScore++;
             return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
         } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
+            playerScore++;
             return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
         } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
+            playerScore++;
             return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
         } else {
+            computerScore++;
             return `YOU LOSE! ${computerSelection} BEATS ${playerSelection}`;
         }
     }
