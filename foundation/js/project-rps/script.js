@@ -1,7 +1,8 @@
 // Create variables to hold computer selection and the player selection
-const playerSelection = "rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+let playerSelection = "rock";
+let computerSelection = getComputerChoice();
+
+game();
 
 // Function to generate the computer selection in a random basis
 function getComputerChoice() {
@@ -15,25 +16,34 @@ function getComputerChoice() {
         return "scissors";
     }
 }
-// Function that takes two parameter, the computer selection and the player selection
-function playRound(playerSelection, computerSelection) {
 
-    // Turn both the arguments to all upper case
-    playerSelection = playerSelection.toUpperCase();
-    computerSelection = computerSelection.toUpperCase();
+function game() {
 
-    // Comparing both selection and return output accordingly
-    if (playerSelection === computerSelection) {
-        return `DRAW! BOTH SELECTS ${playerSelection}`;
+    for(let i = 1; i <= 5; i++) {
+        playerSelection = prompt("Rock, Paper, Scissors");
+
+        console.log(playRound(playerSelection, computerSelection));
     }
-    if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
-        return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
-    } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
-        return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
-    } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
-        return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
-    } else {
-        return `YOU LOSE! ${computerSelection} BEATS ${playerSelection}`;
+
+    // Function that takes two parameter, the computer selection and the player selection
+    function playRound(playerSelection, computerSelection) {
+
+        // Turn both the arguments to all upper case
+        playerSelection = playerSelection.toUpperCase();
+        computerSelection = computerSelection.toUpperCase();
+
+        // Comparing both selection and return output accordingly
+        if (playerSelection === computerSelection) {
+            return `DRAW! BOTH SELECTS ${playerSelection}`;
+        }
+        if (playerSelection === "ROCK" && computerSelection === "SCISSORS") {
+            return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
+        } else if (playerSelection === "PAPER" && computerSelection === "ROCK") {
+            return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
+        } else if (playerSelection === "SCISSORS" && computerSelection === "PAPER") {
+            return `YOU WIN! ${playerSelection} BEATS ${computerSelection}`;
+        } else {
+            return `YOU LOSE! ${computerSelection} BEATS ${playerSelection}`;
+        }
     }
 }
-// Return a string based on the result from the previous function
