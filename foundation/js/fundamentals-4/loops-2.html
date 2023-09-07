@@ -13,7 +13,7 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
 
   <body>
@@ -41,6 +41,22 @@
     ]
 
     // Add your code here
+    // for (contact of phonebook) {
+    //     if (phonebook[contact]) {
+    //         para.textContent = phonebook[contact];
+    //         break;
+    //     } else {
+    //         console.error('something\'s wrong');
+    //     }
+    // }
+
+    for (let i = 0; i < phonebook.length; i++) {
+        if (phonebook[i].name != name) {
+            continue;
+        }
+
+        para.textContent = `Name: ${phonebook[i].name}, Number: ${phonebook[i].number}`;
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
