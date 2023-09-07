@@ -13,7 +13,7 @@
         box-sizing: border-box;
       }
     </style>
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
 
   <body>
@@ -40,8 +40,18 @@
     }
 
 
-    // Add your code here
+    // Add your code here{
+    while (i > 1) {
+        if (!isPrime(i)) {
+            i--;
+            continue;
+        }
 
+        const preview = document.querySelector('.preview');
+        para.textContent += `${i}, `;
+        preview.appendChild(para);
+        i--;
+    }
 
     // Don't edit the code below here!
     const section = document.querySelector('section');
