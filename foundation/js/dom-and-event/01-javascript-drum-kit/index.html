@@ -10,59 +10,59 @@
 
 
   <div class="keys">
-    <div KeyboardEvent: key="KeyA" class="key">
+    <div key="KeyA" class="key">
       <kbd>A</kbd>
       <span class="sound">clap</span>
     </div>
-    <div KeyboardEvent: key="KeyS" class="key">
+    <div key="KeyS" class="key">
       <kbd>S</kbd>
       <span class="sound">hihat</span>
     </div>
-    <div KeyboardEvent: key="KeyD" class="key">
+    <div key="KeyD" class="key">
       <kbd>D</kbd>
       <span class="sound">kick</span>
     </div>
-    <div KeyboardEvent: key="KeyF" class="key">
+    <div key="KeyF" class="key">
       <kbd>F</kbd>
       <span class="sound">openhat</span>
     </div>
-    <div KeyboardEvent: key="KeyG" class="key">
+    <div key="KeyG" class="key">
       <kbd>G</kbd>
       <span class="sound">boom</span>
     </div>
-    <div KeyboardEvent: key="KeyH" class="key">
+    <div key="KeyH" class="key">
       <kbd>H</kbd>
       <span class="sound">ride</span>
     </div>
-    <div KeyboardEvent: key="KeyJ" class="key">
+    <div key="KeyJ" class="key">
       <kbd>J</kbd>
       <span class="sound">snare</span>
     </div>
-    <div KeyboardEvent: key="KeyK" class="key">
+    <div key="KeyK" class="key">
       <kbd>K</kbd>
       <span class="sound">tom</span>
     </div>
-    <div KeyboardEvent: key="KeyL" class="key">
+    <div key="KeyL" class="key">
       <kbd>L</kbd>
       <span class="sound">tink</span>
     </div>
   </div>
 
-  <audio KeyboardEvent: key="KeyA" src="sounds/clap.wav"></audio>
-  <audio KeyboardEvent: key="KeyS" src="sounds/hihat.wav"></audio>
-  <audio KeyboardEvent: key="KeyD" src="sounds/kick.wav"></audio>
-  <audio KeyboardEvent: key="KeyF" src="sounds/openhat.wav"></audio>
-  <audio KeyboardEvent: key="KeyG" src="sounds/boom.wav"></audio>
-  <audio KeyboardEvent: key="KeyH" src="sounds/ride.wav"></audio>
-  <audio KeyboardEvent: key="KeyJ" src="sounds/snare.wav"></audio>
-  <audio KeyboardEvent: key="KeyK" src="sounds/tom.wav"></audio>
-  <audio KeyboardEvent: key="KeyL" src="sounds/tink.wav"></audio>
+  <audio key="KeyA" src="sounds/clap.wav"></audio>
+  <audio key="KeyS" src="sounds/hihat.wav"></audio>
+  <audio key="KeyD" src="sounds/kick.wav"></audio>
+  <audio key="KeyF" src="sounds/openhat.wav"></audio>
+  <audio key="KeyG" src="sounds/boom.wav"></audio>
+  <audio key="KeyH" src="sounds/ride.wav"></audio>
+  <audio key="KeyJ" src="sounds/snare.wav"></audio>
+  <audio key="KeyK" src="sounds/tom.wav"></audio>
+  <audio key="KeyL" src="sounds/tink.wav"></audio>
 
 <script>
 
     function playSound(e) {
-        const audio = document.querySelector(`audio[KeyboardEvent: key="${e.code}"]`)
-        const key = document.querySelector(`.key[KeyboardEvent: key="${e.code}"]`)
+        const audio = document.querySelector(`audio[key="${e.code}"]`)
+        const key = document.querySelector(`.key[key="${e.code}"]`)
         if(!audio) return; // stop the function from running all together
 
         audio.currentTime = 0; // rewind to the start
