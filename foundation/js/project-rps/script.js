@@ -20,6 +20,17 @@ function getComputerChoice() {
 // Full game function
 function game() {
 
+    const btn = document.querySelectorAll('button');
+
+    btn.forEach((btn) => {
+
+        btn.addEventListener('click', function (e) {
+            console.log(e.target.id);
+            playerSelection = e.target.id;
+            console.log(playRound(playerSelection, getComputerChoice()));
+        });
+    });
+
     let playerScore = 0;
     let computerScore = 0;
 
