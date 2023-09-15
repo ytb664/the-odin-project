@@ -23,15 +23,6 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
 
-    // Game rounds loop
-    for(let i = 1; i <= 5; i++) {
-        playerSelection = prompt("Rock, Paper, Scissors");
-        computerSelection = getComputerChoice();
-        console.log(playRound(playerSelection, computerSelection));
-        console.log(`Your Score: ${playerScore}`);
-        console.log(`Computer Score: ${computerScore}`);
-    }
-
     if (playerScore > computerScore) {
         console.log("GAME RESULT YOU WIN!");
     } else if (playerScore < computerScore) {
