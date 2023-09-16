@@ -29,20 +29,25 @@ function game() {
         btn.addEventListener('click', function (e) {
             console.log(e.target.id);
             playerSelection = e.target.id;
-            div.textContent = playRound(playerSelection, getComputerChoice());
+            playRound(playerSelection, getComputerChoice());
+            console.log(playerScore);
+            console.log(computerScore);
+
+            if (playerScore === 5|| computerScore === 5) {
+
+                if (playerScore > computerScore) {
+                    div.textContent = "GAME RESULT YOU WIN!";
+                } else if (playerScore < computerScore) {
+                    div.textContent = "GAME RESULT: YOU LOSE!";
+                } else {
+                    div.textContent = "GAME RESULT: DRAW";
+                }
+            }
         });
     });
 
     let playerScore = 0;
     let computerScore = 0;
-
-    if (playerScore > computerScore) {
-        console.log("GAME RESULT YOU WIN!");
-    } else if (playerScore < computerScore) {
-        console.log("GAME RESULT: YOU LOSE!");
-    } else {
-        console.log("GAME RESULT: DRAW");
-    }
 
     // Function that takes two parameter, the computer selection and the player selection
     function playRound(playerSelection, computerSelection) {

@@ -19,10 +19,13 @@
         return Math.floor(Math.random() * (number+1));
       }
 
-      btn.addEventListener('click', () => {
+      function changeBackground() {
         const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
         document.body.style.backgroundColor = rndCol;
-      });
+      }
+
+      btn.addEventListener('dblclick', changeBackground);
+      btn.removeEventListener('click', changeBackground);
     </script>
   </body>
 </html>
