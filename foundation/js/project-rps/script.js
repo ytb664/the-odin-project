@@ -20,14 +20,16 @@ function getComputerChoice() {
 // Full game function
 function game() {
 
+    const container = document.querySelector('container');
     const btn = document.querySelectorAll('button');
+    const div = document.querySelector('div');
 
     btn.forEach((btn) => {
 
         btn.addEventListener('click', function (e) {
             console.log(e.target.id);
             playerSelection = e.target.id;
-            console.log(playRound(playerSelection, getComputerChoice()));
+            div.textContent = playRound(playerSelection, getComputerChoice());
         });
     });
 
