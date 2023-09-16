@@ -20,9 +20,10 @@ function getComputerChoice() {
 // Full game function
 function game() {
 
-    const container = document.querySelector('container');
+    const container = document.querySelector('#container');
     const btn = document.querySelectorAll('button');
     const div = document.querySelector('div');
+    const score = document.createElement('p');
 
     btn.forEach((btn) => {
 
@@ -30,8 +31,9 @@ function game() {
             console.log(e.target.id);
             playerSelection = e.target.id;
             playRound(playerSelection, getComputerChoice());
-            console.log(playerScore);
-            console.log(computerScore);
+            score.classList.toggle('score');
+            score.textContent = `Player Score: ${playerScore} | Computer Score: ${computerScore}`;
+            container.appendChild(score);
 
             if (playerScore === 5|| computerScore === 5) {
 
