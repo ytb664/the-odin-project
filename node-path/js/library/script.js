@@ -26,9 +26,12 @@ function displayBooksInLibrary() {
         card.appendChild(ul);
 
         for (let x in el) {
+            if ((typeof el[x]) == "function") {
+                continue;
+            }
             const li = document.createElement('li');
             li.textContent = `${x} : ${el[x]}`;
-
+            
             ul.appendChild(li);
         }
     })
