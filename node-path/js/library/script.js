@@ -18,6 +18,7 @@ function addBookToLibrary(book) {
 const container = document.querySelector('.container');
 
 function displayBooksInLibrary() {
+
     myLibrary.forEach((el) => {
         const card = document.createElement('div');
         const ul = document.createElement('ul');
@@ -31,8 +32,16 @@ function displayBooksInLibrary() {
             }
             const li = document.createElement('li');
             li.textContent = `${x} : ${el[x]}`;
-            
+
             ul.appendChild(li);
         }
     })
 }
+
+const btn = document.querySelector('.btn');
+const dialog = document.querySelector('.dialog');
+
+btn.addEventListener("click", () => {
+
+    dialog.showModal();
+});

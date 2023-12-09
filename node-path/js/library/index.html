@@ -9,5 +9,25 @@
 </head>
 <body>
     <div class="container"></div>
+    <button class="add btn">+</button>
+    <dialog class="add dialog">
+        <form action="/my-handling-form-page" method="post">
+            <ul>
+                <li class="title input">
+                    <input type="text" name="book_title" id="title" placeholder="Title"/>
+                </li>
+                <li class="author input">
+                    <input type="text" name="book_author" id="author" placeholder="Author"/>
+                </li>
+                <li class="pages input">
+                    <input type="text" name="book_pages" id="pages" placeholder="Pages"/>
+                </li>
+                <li class="read input">
+                    <label for="read">Read?</label>
+                    <input type="checkbox" name="isRead" id="read"/>
+                </li>
+            </ul>
+        </form>
+    </dialog>
 </body>
 </html>

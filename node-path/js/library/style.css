@@ -1,0 +1,76 @@
+:root {
+	font-size: 62.5%;
+
+	--font-color: white;
+	--main-bg: #0369a1;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: repeat(10, 1fr);
+
+	> .container {
+		grid-column: 1 / 11;
+		grid-row: 2;
+		display: grid;
+		grid-auto-flow: column;
+	}
+
+	& dialog {
+		height: 40vh;
+		width: 30vw;
+		margin: auto;
+		border-radius: 15px;
+		overflow: hidden;
+
+		> form {
+			font-size: 2rem;
+			padding: 2rem;
+			height: 100%;
+
+			> ul {
+				height: 20vh;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				gap: 20px;
+
+				> li {
+					display: flex;
+					justify-content: space-between;
+
+					> input {
+						padding: 1rem;
+					}
+				}
+			}
+		}
+	}
+
+	> .add.btn {
+		width: 100%;
+		height: 100%;
+		color: var(--font-color);
+		background-color: var(--main-bg);
+		border: none;
+		font-size: 5rem;
+		border-radius: 10px;
+		grid-row: 9;
+		grid-column: 9;
+		justify-self: center;
+		align-self: center;
+		cursor: pointer;
+	}
+
+	> .add.btn:hover {
+		opacity: 80%;
+	}
+}
