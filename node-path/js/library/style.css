@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 :root {
 	font-size: 62.5%;
-
+	font-family: 'Roboto', sans-serif;
 	--font-color: white;
 	--main-bg: #0369a1;
 }
@@ -25,10 +27,13 @@ body {
 	}
 
 	& dialog {
-		height: 40vh;
-		width: 30vw;
+		height: 42vh;
+		width: 20vw;
+		padding-bottom: 1rem;
 		margin: auto;
-		border-radius: 15px;
+		outline: none;
+		border: none;
+		border-radius: 10px;
 		overflow: hidden;
 
 		> form {
@@ -44,11 +49,40 @@ body {
 				gap: 20px;
 
 				> li {
-					display: flex;
-					justify-content: space-between;
+					width: 100%;
+					text-align: center;
+					list-style: none;
 
+					> .title.dialog {
+						font-size: 2.5rem;
+						font-weight: bold;
+					}
 					> input {
+						width: 15vw;
+						height: 2vh;
 						padding: 1rem;
+						border: none;
+						border: 2px solid var(--main-bg);
+						border-radius: 5px;
+					}
+
+					> input:focus {
+						outline: none;
+					}
+
+					> input[type="checkbox"] {
+						width: 5rem;
+						accent-color: var(--main-bg);
+					}
+
+					> button {
+						padding: 1rem;
+						width: 17vw;
+						height: 5vh;
+						border-radius: 5px;
+						border: none;
+						background-color: var(--main-bg);
+						color: var(--font-color);
 					}
 				}
 			}
