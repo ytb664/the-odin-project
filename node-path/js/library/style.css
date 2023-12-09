@@ -26,6 +26,11 @@ body {
 		grid-auto-flow: column;
 	}
 
+	::backdrop {
+		background-color: black;
+		opacity: 0.7;
+	}
+
 	& dialog {
 		height: 42vh;
 		width: 20vw;
@@ -35,6 +40,7 @@ body {
 		border: none;
 		border-radius: 10px;
 		overflow: hidden;
+		box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 
 		> form {
 			font-size: 2rem;
