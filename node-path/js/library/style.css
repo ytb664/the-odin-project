@@ -18,12 +18,60 @@ body {
 	display: grid;
 	grid-template-columns: repeat(10, 1fr);
 	grid-template-rows: repeat(10, 1fr);
+	gap: 10px;
+
+	> .header {
+		padding: 20px;
+		color: var(--font-color);
+		background-color: var(--main-bg);
+		grid-column: 1 / 11;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		> h1 {
+			font-size: 3rem;
+		}
+
+		> ul {
+			font-size: 1.5rem;
+			list-style: none;
+			display: flex;
+			gap: 30px;
+		}
+	}
 
 	> .container {
-		grid-column: 1 / 11;
+		grid-column: 2 / 10;
 		grid-row: 2;
-		display: grid;
-		grid-auto-flow: column;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 2rem;
+
+		> .card {
+			font-size: 2rem;
+			color: var(--font-color);
+			background-color: var(--main-bg);
+			border-radius: 10px;
+			text-align: center;
+			padding: 1rem;
+			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+			> ul {
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 20px;
+			}
+
+			& li {
+				width: 200px;
+				list-style: none;
+				display: flex;
+				justify-content: space-between;
+			}
+		}
 	}
 
 	::backdrop {
@@ -96,13 +144,14 @@ body {
 	}
 
 	> .add.btn {
-		width: 100%;
-		height: 100%;
+		width: 8rem;
+		height: 8rem;
 		color: var(--font-color);
 		background-color: var(--main-bg);
 		border: none;
+		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 1) 0px -2px 6px 0px inset;
 		font-size: 5rem;
-		border-radius: 10px;
+		border-radius: 100px;
 		grid-row: 9;
 		grid-column: 9;
 		justify-self: center;

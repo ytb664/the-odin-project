@@ -8,10 +8,21 @@
     <script src="script.js" defer></script>
 </head>
 <body>
+    <div class="header">
+        <h1>Jekdo</h1>
+        <ul>
+            <li>
+                Sign Up
+            </li>
+            <li>
+                Log In
+            </li>
+        </ul>
+    </div>
     <div class="container"></div>
     <button class="add btn">+</button>
     <dialog class="add dialog">
-        <form action="/my-handling-form-page" method="post">
+        <form method="post">
             <ul>
                 <li>
                     <div class="title dialog">
@@ -32,7 +43,7 @@
                     <input type="checkbox" name="isRead" id="read"/>
                 </li>
                 <li>
-                    <button class="submit btn">Submit</button>
+                    <button class="submit btn" type="button">Submit</button>
                 </li>
             </ul>
         </form>
