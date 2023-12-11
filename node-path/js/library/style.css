@@ -4,7 +4,7 @@
 	font-size: 62.5%;
 	font-family: 'Roboto', sans-serif;
 	--font-color: white;
-	--main-bg: #0369a1;
+	--main-bg: #034078;
 }
 
 * {
@@ -53,7 +53,7 @@ body {
 			font-size: 2rem;
 			color: var(--font-color);
 			background-color: var(--main-bg);
-			border-radius: 10px;
+			border-radius: 5px;
 			text-align: center;
 			padding: 1rem;
 			box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -152,8 +152,9 @@ body {
 		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 1) 0px -2px 6px 0px inset;
 		font-size: 5rem;
 		border-radius: 100px;
-		grid-row: 9;
-		grid-column: 9;
+		position: fixed;
+		top: 80%;
+		left: 80%;
 		justify-self: center;
 		align-self: center;
 		cursor: pointer;
