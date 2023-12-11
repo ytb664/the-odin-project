@@ -4,7 +4,7 @@ function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
     this.pages = pages;
-    this.read = isRead ? 'read' : 'Not Read';
+    this.read = isRead ? 'Read' : 'Not Read';
 }
 
 Book.prototype.info = () => {
@@ -30,19 +30,36 @@ function displayBooksInLibrary() {
         card.appendChild(ul);
 
         for (let x in el) {
+
             if ((typeof el[x]) == "function") {
                 continue;
             }
+
             const li = document.createElement('li');
             const label = document.createElement('label');
             const div = document.createElement('div');
-
-            label.textContent = `${x}:`
-            div.textContent = `${el[x]}`;
+            const btn = document.createElement('button');
 
             ul.appendChild(li);
-            li.appendChild(label);
-            li.appendChild(div);
+
+            switch(el[x]) {
+                case 'Read':
+                    btn.textContent = el[x];
+
+                    li.appendChild(btn);
+                    break;
+                case 'Not Read':
+                    btn.textContent = el[x];
+                    
+                    li.appendChild(btn);
+                    break;
+                default:
+                    label.textContent = `${x}:`
+                    div.textContent = `${el[x]}`;
+
+                    li.appendChild(label);
+                    li.appendChild(div);
+            }
         }
     })
 }
