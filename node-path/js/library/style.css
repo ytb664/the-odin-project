@@ -27,6 +27,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		border-bottom: 2px solid var(--main-bg);
 
 		> h1 {
 			font-size: 3rem;
@@ -37,6 +38,14 @@ body {
 			list-style: none;
 			display: flex;
 			gap: 30px;
+
+			> li {
+				cursor: pointer;
+			}
+
+			> li:hover {
+				opacity: 0.8;
+			}
 		}
 	}
 
@@ -72,7 +81,12 @@ body {
 				align-items: stretch;
 
 				> button {
+					padding: 5px;
 					width: 100%;
+					border: none;
+					color: var(--main-bg);
+					font-weight: bold;
+					cursor: pointer;
 				}
 			}
 		}
