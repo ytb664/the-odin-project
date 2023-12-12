@@ -39,17 +39,20 @@ function displayBooksInLibrary() {
             const label = document.createElement('label');
             const div = document.createElement('div');
             const btn = document.createElement('button');
+            btn.classList.add('read-button')
 
             ul.appendChild(li);
 
             switch(el[x]) {
                 case 'Read':
                     btn.textContent = el[x];
+                    btn.classList.add('hasRead');
 
                     li.appendChild(btn);
                     break;
                 case 'Not Read':
                     btn.textContent = el[x];
+                    btn.classList.add('hasNotRead');
                     
                     li.appendChild(btn);
                     break;

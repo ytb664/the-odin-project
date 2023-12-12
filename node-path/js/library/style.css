@@ -22,8 +22,7 @@ body {
 
 	> .header {
 		padding: 20px;
-		color: var(--font-color);
-		background-color: var(--main-bg);
+		color: var(--main-bg);
 		grid-column: 1 / 11;
 		display: flex;
 		justify-content: space-between;
@@ -70,6 +69,11 @@ body {
 				list-style: none;
 				display: flex;
 				justify-content: space-between;
+				align-items: stretch;
+
+				> button {
+					width: 100%;
+				}
 			}
 		}
 	}
