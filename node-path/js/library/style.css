@@ -22,6 +22,7 @@ body {
 
 	> .header {
 		padding: 20px;
+		margin-bottom: 30px;
 		color: var(--main-bg);
 		grid-column: 1 / 11;
 		display: flex;

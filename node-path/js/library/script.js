@@ -43,25 +43,23 @@ function displayBooksInLibrary() {
 
             ul.appendChild(li);
 
-            switch(el[x]) {
-                case 'Read':
-                    btn.textContent = el[x];
-                    btn.classList.add('hasRead');
+            if (el[x] == 'Read' || el[x] == 'Not Read') {
+                btn.textContent = el[x];
 
-                    li.appendChild(btn);
-                    break;
-                case 'Not Read':
-                    btn.textContent = el[x];
-                    btn.classList.add('hasNotRead');
-                    
-                    li.appendChild(btn);
-                    break;
-                default:
-                    label.textContent = `${x}:`
-                    div.textContent = `${el[x]}`;
+                li.appendChild(btn);
+            } else {
+                label.textContent = `${x}:`
+                div.textContent = `${el[x]}`;
 
-                    li.appendChild(label);
-                    li.appendChild(div);
+                if (x == 'title') {
+                    let id = `${el[x]}`.toLowerCase().split(' ');
+                    id = id.join('-');
+
+                    card.id = `card-${id}`;
+                }
+
+                li.appendChild(label);
+                li.appendChild(div);
             }
         }
     })
@@ -112,3 +110,10 @@ submit.addEventListener('click', () => {
     displayBooksInLibrary();
     dialog.close();
 });
+
+const readBtn = document.querySelectorAll('.read-button');
+
+for (let el of readBtn) {
+
+
+}
