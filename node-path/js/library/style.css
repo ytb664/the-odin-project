@@ -80,15 +80,21 @@ body {
 				display: flex;
 				justify-content: space-between;
 				align-items: stretch;
+			}
 
-				> button {
-					padding: 5px;
-					width: 100%;
-					border: none;
-					color: var(--main-bg);
-					font-weight: bold;
-					cursor: pointer;
-				}
+			& button {
+				padding: 5px;
+				width: 100%;
+				border-radius: 3px;
+				border: none;
+				color: var(--main-bg);
+				font-weight: bold;
+				cursor: pointer;
+			}
+
+			> .delete-button {
+				margin-top: 10px;
+				color: red;
 			}
 		}
 	}

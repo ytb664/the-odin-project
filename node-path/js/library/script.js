@@ -33,7 +33,7 @@ function displayBooksInLibrary() {
 
         for (let x in el) {
 
-            if ((typeof el[x]) == "function") {
+            if ((typeof el[x]) == "function" || x == 'id') {
                 continue;
             }
 
@@ -41,14 +41,19 @@ function displayBooksInLibrary() {
             const label = document.createElement('label');
             const div = document.createElement('div');
             const btn = document.createElement('button');
+            const deleteBtn = document.createElement('button');
+
             btn.classList.add('read-button')
+            deleteBtn.classList.add('delete-button');
+            deleteBtn.textContent = 'DELETE';
 
             ul.appendChild(li);
 
             if (el[x] == 'Read' || el[x] == 'Not Read') {
                 btn.textContent = el[x];
 
-                li.appendChild(btn);
+                card.appendChild(btn);
+                card.appendChild(deleteBtn);
             } else {
                 label.textContent = `${x}:`
                 div.textContent = `${el[x]}`;
@@ -57,6 +62,7 @@ function displayBooksInLibrary() {
                     let id = `${el[x]}`.toLowerCase().split(' ');
                     id = id.join('-');
 
+                    el.id = `book-${id}`;
                     card.id = `card-${id}`;
                 }
 
