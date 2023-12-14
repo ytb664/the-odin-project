@@ -20,6 +20,8 @@ const dialog = document.querySelector('.dialog');
 
 function displayBooksInLibrary() {
 
+    resetCard();
+
     myLibrary.forEach((el) => {
         const card = document.createElement('div');
         const ul = document.createElement('ul');
@@ -65,6 +67,15 @@ function displayBooksInLibrary() {
     })
 }
 
+function resetCard() {
+
+    const card = document.querySelectorAll('.card');
+
+    for (el of card) {
+        el.remove();
+    }
+}
+
 const btn = document.querySelector('.btn');
 
 btn.addEventListener("click", () => {
@@ -98,6 +109,8 @@ submit.addEventListener('click', () => {
             case 'pages':
                 pages = value;
         }
+
+        el.value = '';
     }
 
     if (read.checked == true) {
@@ -110,10 +123,3 @@ submit.addEventListener('click', () => {
     displayBooksInLibrary();
     dialog.close();
 });
-
-const readBtn = document.querySelectorAll('.read-button');
-
-for (let el of readBtn) {
-
-
-}
