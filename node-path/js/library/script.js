@@ -1,4 +1,4 @@
-const myLibrary = [];
+let myLibrary = [];
 
 function Book(title, author, pages, isRead) {
     this.title = title;
@@ -33,7 +33,7 @@ function displayBooksInLibrary() {
 
         for (let x in el) {
 
-            if ((typeof el[x]) == "function" || x == 'id') {
+            if (typeof el[x] == "function" || x == 'id') {
                 continue;
             }
 
@@ -45,7 +45,18 @@ function displayBooksInLibrary() {
 
             btn.classList.add('read-button')
             deleteBtn.classList.add('delete-button');
+            deleteBtn.setAttribute('type', 'button');
             deleteBtn.textContent = 'DELETE';
+
+            deleteBtn.addEventListener('click', () => {
+
+                myLibrary = myLibrary.filter((book) => {
+
+                    book.id == el.id;
+                })
+
+                displayBooksInLibrary();
+            })
 
             ul.appendChild(li);
 
