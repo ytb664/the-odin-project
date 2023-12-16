@@ -50,10 +50,8 @@ function displayBooksInLibrary() {
 
             deleteBtn.addEventListener('click', () => {
 
-                myLibrary = myLibrary.filter((book) => {
-
-                    book.id == el.id;
-                })
+                const index = myLibrary.indexOf(el);
+                myLibrary.splice(index,1);
 
                 displayBooksInLibrary();
             })
