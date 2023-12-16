@@ -162,6 +162,7 @@ body {
 						border: none;
 						background-color: var(--main-bg);
 						color: var(--font-color);
+						cursor: pointer;
 					}
 				}
 			}
@@ -171,10 +172,13 @@ body {
 	> .add.btn {
 		width: 8rem;
 		height: 8rem;
-		color: var(--font-color);
+		/* color: var(--font-color);
 		background-color: var(--main-bg);
-		border: none;
-		box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 1) 0px -2px 6px 0px inset;
+		border: none; */
+		color: var(--main-bg);
+		background-color: var(--font-color);
+		border: 3px solid var(--main-bg);
+		/* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 1) 0px -2px 6px 0px inset; */
 		font-size: 5rem;
 		border-radius: 100px;
 		position: fixed;
@@ -183,9 +187,12 @@ body {
 		justify-self: center;
 		align-self: center;
 		cursor: pointer;
+		transition: 0.5s;
 	}
 
 	> .add.btn:hover {
-		opacity: 80%;
+		transition: 0.5s;
+		background-color: var(--main-bg);
+		color: var(--font-color);
 	}
 }
