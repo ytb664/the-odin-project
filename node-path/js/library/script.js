@@ -1,5 +1,7 @@
+// The library
 let myLibrary = [];
 
+// Book constructor
 function Book(title, author, pages, isRead) {
     this.title = title;
     this.author = author;
@@ -11,6 +13,7 @@ Book.prototype.info = () => {
     return `${this.title} by ${this.author}, ${this.pages} pages, ${this.read}`
 }
 
+// Add book to library
 function addBookToLibrary(book) {
     myLibrary.push(book);
 }
@@ -18,6 +21,7 @@ function addBookToLibrary(book) {
 const container = document.querySelector('.container');
 const dialog = document.querySelector('.dialog');
 
+// Display library in cards
 function displayBooksInLibrary() {
 
     resetCard();
@@ -44,6 +48,14 @@ function displayBooksInLibrary() {
             const deleteBtn = document.createElement('button');
 
             btn.classList.add('read-button')
+
+            btn.addEventListener('click', () => {
+
+                el.read == 'Read' ? el.read = 'Not Read' : el.read = 'Read';
+
+                displayBooksInLibrary();
+            })
+
             deleteBtn.classList.add('delete-button');
             deleteBtn.setAttribute('type', 'button');
             deleteBtn.textContent = 'DELETE';
@@ -81,6 +93,7 @@ function displayBooksInLibrary() {
         }
     })
 }
+
 
 function resetCard() {
 
@@ -138,3 +151,4 @@ submit.addEventListener('click', () => {
     displayBooksInLibrary();
     dialog.close();
 });
+
