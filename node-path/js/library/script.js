@@ -138,7 +138,7 @@ submit.addEventListener('click', () => {
                 pages = value;
         }
 
-        el.value = '';
+        el.value = null;
     }
 
     if (read.checked == true) {
