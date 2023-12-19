@@ -39,15 +39,28 @@
         // console.log(sayHello('kait'));
         // console.log(sayHey('kait'));
 
-        function createGame(gameName){
-            let score = 0;
-            return function win(){
-                score ++;
-                return `Your name ${gameName} score is ${score}`
-            }
+        // function createGame(gameName){
+        //     let score = 0;
+        //     return function win(){
+        //         score ++;
+        //         return `Your name ${gameName} score is ${score}`
+        //     }
+        // }
+        // const hockeyGame = createGame('Hockey');
+        // const soccerGame = createGame('Soccer');
+
+        const Formatter = (function() {
+        const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
+
+        const makeUppercase = (text) => {
+            log("Making uppercase");
+            return text.toUpperCase();
+        };  
+
+        return {
+            makeUppercase,
         }
-        const hockeyGame = createGame('Hockey');
-        const soccerGame = createGame('Soccer');
+        })();
     </script>
 </body>
 </html>
