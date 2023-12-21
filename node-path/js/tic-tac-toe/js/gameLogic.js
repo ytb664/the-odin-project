@@ -123,8 +123,4 @@ const createMatch = (playerX, playerO, gameBoard) => {
     };
 }
 
-const gameBoard = createGameBoard();
-const playerX = createPlayer("Player X", "X");
-const playerO = createPlayer("Player O", "O");
-
-const match = createMatch(playerX, playerO, gameBoard);
+export { createGameBoard, createPlayer, createMatch };
