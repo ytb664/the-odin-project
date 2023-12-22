@@ -1,0 +1,13 @@
+.board ul {
+    width: 60vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.board li {
+    width: 20vw;
+    height: 20vh;
+    border: 2px solid #000000;
+    list-style: none;
+}
