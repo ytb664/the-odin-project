@@ -112,7 +112,7 @@ const createMatch = (playerX, playerO, gameBoard) => {
         currentPlayer = playerX;
     };
 
-    const getCurrentPlayer = () => currentPlayer;
+    const getCurrentPlayer = () => currentPlayer.getMarker();
 
     return {
         mark,
@@ -129,7 +129,7 @@ const playerX = createPlayer("Player X", "X");
 const playerO = createPlayer("Player O", "O");
 const match = createMatch(playerX, playerO, gameBoard);
 
-(() => {
+const createUI = (() => {
 
     // Appends elements to a parent
     const appendElements = (parent, ...elements) => {
@@ -168,6 +168,27 @@ const match = createMatch(playerX, playerO, gameBoard);
         const turn = appendElementWithClass(main, 'div', 'turn');
         const board = appendElementWithClass(main, 'div', 'board');
         const btn = appendElementWithClass(main, 'button', 'reset');
+
+        header.textContent = 'Tic-Tac-Toe';
+        turn.textContent = `${match.getCurrentPlayer()} turn`;
+        btn.textContent = 'Restart';
+        footer.textContent = 'Copyright \u00A9 2023 ytb664';
+
+        const displayBoard = (() => {
+
+            const ul = document.createElement('ul');
+            board.appendChild(ul);
+
+            for (let i = 0; i < gameBoard.getBoard().length; i++) {
+
+                const li = document.createElement('li');
+                li.textContent = gameBoard.getBoard()[i];
+
+                ul.appendChild(li);
+            }
+        })
+
+        displayBoard();
 
         return { container, header, main, footer, turn, board, btn };
     })();
